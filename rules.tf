@@ -31,4 +31,8 @@ resource "sentry_rule" "slack_notification" {
       workspace  = var.action_slack_workspace_id
     }
   ]
+
+  depends_on = [
+    sentry_project.project,
+  ]
 }
